@@ -1,0 +1,27 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, compose } from 'redux';
+import reducer from './reducers';
+import App from './routes/App';
+
+const fetchData = () => {
+    const API = 'http://ddragon.leagueoflegends.com/cdn/10.10.3216176/data/es_MX/champion.json';
+    return fetch(API)
+    .then(data => data.json())
+    .then(response => response)
+    .catch(error => console.error(error));
+};
+
+
+fetchData().then(initialState => {
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    const store = createStore(reducer, initialState, composeEnhancers);
+
+    ReactDOM.render(
+        <Provider store={store}>
+            <App />
+        </Provider>,
+        document.getElementById('app')
+    );
+})
