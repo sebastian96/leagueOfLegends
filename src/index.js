@@ -14,8 +14,20 @@ const fetchData = () => {
 };
 
 
-fetchData().then(initialState => {
-    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+fetchData().then(response => {
+    const keys = Object.keys(response.data);
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+
+    let initialState = {
+        champs: []
+    };
+    
+    for(let i = 0; i <= keys.length; i++) {
+        if(keys[i]) {
+            initialState.champs.push(response.data[keys[i]])
+        }
+    }
+    
     const store = createStore(reducer, initialState, composeEnhancers);
 
     ReactDOM.render(
