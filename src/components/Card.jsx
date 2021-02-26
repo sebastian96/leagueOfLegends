@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/Card.scss';
 
-const Card = props => {
-    const {id, name, image, title} = props;
+const Card = ({id, name, image, title}) => {
     const splitImage = image.full.split('.');
     const urlImage = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${splitImage[0]}_0.jpg`;
     

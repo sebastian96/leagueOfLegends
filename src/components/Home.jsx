@@ -6,6 +6,7 @@ import '../assets/styles/App.scss';
 
 const Home = props => {
     const { champs, find } = props;
+    
     return (
         <>
             <Search />

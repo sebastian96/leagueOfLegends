@@ -18,11 +18,6 @@ const reducer = (state, action) => {
                 ...state,
                 find: findChamp()
             }
-        case 'GET_CHAMPION':
-            return {
-                ... state,
-                champ: state.champs.find(champ => champ.id === action.payload)
-            }
         default:
             return state;
     };

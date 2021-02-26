@@ -1,51 +1,26 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { getChamp } from '../actions';
+import React, { useState, useEffect } from 'react';
+import apiConsumption from '../utils/petitions';
+import Blurb from './champ/Blurb';
 import '../assets/styles/components/Champ.scss';
 
-const Champ = props => {
+const Champ = (props) => {
+    const [champ, setChamp] = useState(null);
     const { idChamp } = props.match.params;
-    const champ = props.champ;
-
-    const getImage = () =>  {
-        const splitImage = champ.image.full.split('.');
-        return `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${splitImage[0]}_0.jpg`;
-    }
     
+    const getChamp = async () => {
+        const response = await apiConsumption(`champion/${idChamp}.json`);
+        setChamp(response.data[idChamp]);
+    }
 
     useEffect(() => {
-        props.getChamp(idChamp);
-    }, []);
+        getChamp();
+    }, [])
     
     return champ ? (
         <section className="champ">
-            <header className="champ__header">
-                <Link to="/" className="champ__header-icon">
-                    <i className="fas fa-arrow-left"></i>
-                </Link>
-                <h2 className="champ__header-name">{champ.name}</h2>
-            </header>
-            <section className="champ__info">
-                <div className="champ__info-text">
-                    <h2>{champ.title}</h2>
-                    <p>{champ.blurb}</p>
-                </div>
-                <div className="champ__info-image">
-                    <img src={getImage()} alt="imagen de campeon" />
-                </div>
-            </section>
-        </section>
-    ): <h2>Hola que hace</h2>
+            <Blurb name={champ.name} title={champ.title} blurb={champ.blurb} lore={champ.lore} image={champ.image}/>
+        </section> 
+    ): <> </>
 };
 
-const mapDispatchToProps = {
-    getChamp
-}
-const mapStateToProps = state => {
-    return {
-        champ: state.champ
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Champ);
+export default Champ;
