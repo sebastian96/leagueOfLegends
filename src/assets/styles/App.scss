@@ -7,16 +7,5 @@
 }
 
 body {
-    font-family: $theme-font;
-    font-size: 17px;
-    background: #140d15;
-}
-
-.App {
-    width: 100%;
-    padding-top: 10px;
-    .main {
-        width: 80%;
-        margin: auto;
-    }
+    background: $theme-background-color !important;
 }

@@ -1,0 +1,33 @@
+@import "../Vars.scss";
+
+.navbar {
+    max-height: 80px;
+    margin-bottom: 20px;
+    background: $theme-header-color;
+    box-shadow: 0px 0px 10px 1px $theme-font-color;
+    &-brand {
+        &-img {
+          width: 100px;
+          height: 100px;
+          vertical-align: top;  
+        }
+    }
+    .search {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        &__input {
+            outline: none;
+            height: 40px;
+            border-radius: 15px;
+            border: none;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
+
+::placeholder {
+    color: #140d15;
+}

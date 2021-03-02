@@ -1,31 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Card from './Card';
-import Search from './Search';
-import '../assets/styles/App.scss';
+import '../assets/styles/components/Home.scss';
 
 const Home = props => {
     const { champs, find } = props;
     
     return (
-        <>
-            <Search />
-            <div className="container">
-                {find ? 
-                    <>
-                        {find.map(champ => 
-                            <Card key={champ.id} {...champ} />
-                        )}
-                    </>
-                    :
-                    <>
-                        {champs.map(champ => 
-                            <Card key={champ.id} {...champ} />
-                        )}
-                    </>
-                }
-            </div>
-        </>
+        <div className="container-cards main">
+            {find ? 
+                <>
+                    {find.map(champ => 
+                        <Card key={champ.id} {...champ} />
+                    )}
+                </>
+                :
+                <>
+                    {champs.map(champ => 
+                        <Card key={champ.id} {...champ} />
+                    )}
+                </>
+            }
+        </div>
     );
 }
 
