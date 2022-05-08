@@ -18,6 +18,23 @@ const reducer = (state, action) => {
                 ...state,
                 find: findChamp()
             }
+        case 'SEARCH_CHAMPION_TAG':
+            const findChamps = () => {
+                let find = [];
+                state.champs.forEach(e => {
+                    if(e.tags.includes(action.payload)) {
+                        find.push(e)
+                    }
+                });
+                if(action.payload === 'All') {
+                    return find = undefined;
+                }
+                return find;
+            }
+            return {
+                ...state, 
+                find: findChamps()
+            }
         default:
             return state;
     };

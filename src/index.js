@@ -1,10 +1,10 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, compose } from 'redux';
+import { createStore } from 'redux';
 import reducer from './reducers';
 import App from './routes/App';
-import apiConsumption from './utils/petitions';
+import {apiConsumption} from './utils/petitions';
 import 'bootswatch/dist/cyborg/bootstrap.min.css';
 
 

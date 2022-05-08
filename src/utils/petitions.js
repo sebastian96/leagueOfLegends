@@ -1,8 +1,19 @@
 const apiConsumption = async (endpoint) => {
-    let baseURL = 'https://ddragon.leagueoflegends.com/cdn/11.4.1/data/es_MX/';
-
+    const lastVersion = await getLastVersion();
+    const baseURL = `https://ddragon.leagueoflegends.com/cdn/${lastVersion}/data/es_MX/`;
     const data = await fetch(`${baseURL}${endpoint}`);
+    
     return data.json();
 }
 
-export default apiConsumption;
+const getLastVersion = async () => {
+    const baseURL = "https://ddragon.leagueoflegends.com/api/versions.json";
+    const data = await fetch(baseURL);
+
+    return data.json().then(versions =>  versions[0])
+}
+
+module.exports = {
+    apiConsumption,
+    getLastVersion
+}

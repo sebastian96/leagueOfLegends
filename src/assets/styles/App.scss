@@ -8,4 +8,13 @@
 
 body {
     background: $theme-background-color !important;
+    font-size: 17px;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    color: $theme-font-color !important;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
 }

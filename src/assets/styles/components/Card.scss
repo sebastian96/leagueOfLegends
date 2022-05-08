@@ -2,11 +2,10 @@
 
 .container-cards {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    .card {
+    .card_champ {
         position: relative;
-        margin: 10px 0px;
+        margin: 10px 1.09rem;
         transition: all .3s;
         cursor: pointer;
         max-width: 154px;
@@ -41,11 +40,11 @@
             }
         }
         &:hover {
-            box-shadow: 0px 0px 6px 1px $theme-font-color;
-            .card__info {
+            box-shadow: 0px 0px 6px 1px #000;
+            .card_champ__info {
                 display: flex;
             }
-            .card__image {
+            .card_champ__image {
                 filter: blur(7px);
             }
         }

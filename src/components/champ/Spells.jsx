@@ -1,32 +1,65 @@
 import React, {useState, useEffect} from 'react';
+import parse from 'html-react-parser';
+import { getLastVersion } from '../../utils/petitions';
+import '../../assets/styles/components/Spell.scss'
 
 const Spells = ({passive, spells}) => {
-    return(
-        <>
-            <h3>Habilidades</h3>
+    const [infoSpell, setInfoSpell] = useState({
+        name: passive.name,
+        description: passive.description
+    });
+    const [urlImage, setUrlImage] = useState("");
 
-            <nav>
-                <ul>
-                    {passive &&
-                        <li>
-                        <button>
-                            <img src={`https://ddragon.leagueoflegends.com/cdn/11.4.1/img/passive/${passive.image.full}`} alt="passive"/>
-                        </button>
-                        </li>
-                    }
-                    
-                    {spells.map((spell, i) => (
-                        <li>
-                            <button key={i}>
-                                <img src={`https://ddragon.leagueoflegends.com/cdn/11.4.1/img/spell/${spell.image.full}`} alt="spell"/>
-                            </button>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
+    const setSpellInfo = (id = null) => {
+        const spell = spells.find(spell => spell.id === id);
+
+        setInfoSpell({
+            name: id ? spell.name : passive.name,
+            description: id ? spell.description : passive.description
+        })
+    }
+
+    const getTemplate = () => (
+        <ul className="nav nav-pills">
+            {passive &&
+                <li className="nav-item">
+                    <button className="btn" onClick={() => setSpellInfo()}>
+                        <img src={`${urlImage}passive/${passive.image.full}`} alt="passive"/>
+                    </button>
+                </li>
+            }
+            
+            {spells.map((spell) => (
+                <li key={spell.id} className="nav-item">
+                    <button className="btn" onClick={() => setSpellInfo(spell.id)}>
+                        <img src={`${urlImage}spell/${spell.image.full}`} alt="spell"/>
+                    </button>
+                </li>
+            ))}
+        </ul>
+    )
+
+    const fetchVersion = async () => {
+        const lastVersion = await getLastVersion()
+        setUrlImage(`https://ddragon.leagueoflegends.com/cdn/${lastVersion}/img/`)
+    }
+    
+    useEffect(() => {
+        fetchVersion()
+    }, [])
 
 
-        </>
+    return (
+        <section className="row d-flex mt-5">
+            <h3 className="w-100">Habilidades</h3>
+            <div className="align-items-center col-md-6 d-flex">
+                {getTemplate()}
+            </div>
+            <div className="col-md-6">
+                <h4>{infoSpell.name}</h4>
+                <p> {parse(infoSpell.description)} </p>
+            </div>
+        </section>
     )
 };
 

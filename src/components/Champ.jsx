@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import apiConsumption from '../utils/petitions';
+import {apiConsumption} from '../utils/petitions';
 import Blurb from './champ/Blurb';
 import Spells from './champ/Spells';
 import '../assets/styles/components/Champ.scss';
@@ -18,7 +18,7 @@ const Champ = (props) => {
     }, [])
     
     return champ ? (
-        <section className="champ">
+        <section className="container champ">
             <Blurb 
                 name={champ.name} 
                 title={champ.title} 

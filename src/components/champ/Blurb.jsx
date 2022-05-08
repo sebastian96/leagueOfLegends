@@ -25,11 +25,13 @@ const Blurb = ({name, title, blurb, lore, image}) => {
                 <Link to="/" className="champ__header-icon">
                     <i className="fas fa-arrow-left"></i>
                 </Link>
-                <h2 className="champ__header-name">{name}</h2>
+                <h3 className="champ__header-name">
+                    <b>{name}</b> - 
+                    <i> {title.toLowerCase()} </i>
+                </h3>
             </header>
             <section className="champ__info">
                 <div className="champ__info-text">
-                    <h2>{title}</h2>
                     <p>
                         {text} 
                         <button 

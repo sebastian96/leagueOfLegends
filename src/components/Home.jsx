@@ -7,20 +7,22 @@ const Home = props => {
     const { champs, find } = props;
     
     return (
-        <div className="container-cards main">
-            {find ? 
-                <>
-                    {find.map(champ => 
-                        <Card key={champ.id} {...champ} />
-                    )}
-                </>
-                :
-                <>
-                    {champs.map(champ => 
-                        <Card key={champ.id} {...champ} />
-                    )}
-                </>
-            }
+        <div className="main">
+            <div className="container-cards">
+                {find ? 
+                    <>
+                        {find.map(champ => 
+                            <Card key={champ.id} {...champ} />
+                        )}
+                    </>
+                    :
+                    <>
+                        {champs.map(champ => 
+                            <Card key={champ.id} {...champ} />
+                        )}
+                    </>
+                }
+            </div>
         </div>
     );
 }

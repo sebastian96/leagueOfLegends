@@ -5,8 +5,8 @@ import '../assets/styles/App.scss';
 
 const Layout = withRouter (({ children, location }) => (
     <>
-        <Header />
-        <div className="container mt-5">
+        <Header route={location}/>
+        <div className="mt-5">
             { children }
         </div>
     </>
