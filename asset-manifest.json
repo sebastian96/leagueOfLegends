@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/league-of-legends/static/css/main.66ad99c5.chunk.css",
+    "main.js": "/league-of-legends/static/js/main.8fd730a3.chunk.js",
+    "main.js.map": "/league-of-legends/static/js/main.8fd730a3.chunk.js.map",
+    "runtime-main.js": "/league-of-legends/static/js/runtime-main.7642da62.js",
+    "runtime-main.js.map": "/league-of-legends/static/js/runtime-main.7642da62.js.map",
+    "static/css/2.74279360.chunk.css": "/league-of-legends/static/css/2.74279360.chunk.css",
+    "static/js/2.351399cc.chunk.js": "/league-of-legends/static/js/2.351399cc.chunk.js",
+    "static/js/2.351399cc.chunk.js.map": "/league-of-legends/static/js/2.351399cc.chunk.js.map",
+    "index.html": "/league-of-legends/index.html",
+    "static/css/2.74279360.chunk.css.map": "/league-of-legends/static/css/2.74279360.chunk.css.map",
+    "static/css/main.66ad99c5.chunk.css.map": "/league-of-legends/static/css/main.66ad99c5.chunk.css.map",
+    "static/js/2.351399cc.chunk.js.LICENSE.txt": "/league-of-legends/static/js/2.351399cc.chunk.js.LICENSE.txt",
+    "static/media/logo.c4dab6f4.png": "/league-of-legends/static/media/logo.c4dab6f4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7642da62.js",
+    "static/css/2.74279360.chunk.css",
+    "static/js/2.351399cc.chunk.js",
+    "static/css/main.66ad99c5.chunk.css",
+    "static/js/main.8fd730a3.chunk.js"
+  ]
+}
