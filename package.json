@@ -1,6 +1,7 @@
 {
   "name": "league-of-legends",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "homepage": "https://smiranda96.github.io/league-of-legends",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "css-loader": "^3.2.0",
     "file-loader": "^5.0.2",
+    "gh-pages": "^4.0.0",
     "html-loader": "^0.5.5",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^7.0.0",
@@ -28,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
