@@ -22,7 +22,7 @@ const Blurb = ({name, title, blurb, lore, image}) => {
     return (
         <>
             <header className="champ__header">
-                <Link to="/leagueOfLegends" className="champ__header-icon">
+                <Link to="/leagueOfLegends/" className="champ__header-icon">
                     <i className="fas fa-arrow-left"></i>
                 </Link>
                 <h3 className="champ__header-name">

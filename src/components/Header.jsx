@@ -16,13 +16,13 @@ const Search = ({searchChamp, searchChampTag, route}) => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark justify-content-between fixed-top">
-            <Link to="/leagueOfLegends" className="navbar-brand">
+            <Link to="/leagueOfLegends/" className="navbar-brand">
                 <img className="navbar-brand-img" src={logo} alt="logo league of legends"/>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
-            {route.pathname === '/leagueOfLegends' &&
+            {route.pathname === '/leagueOfLegends/' &&
                 <>
                     <ul className="nav nav-pills">
                         <li className="nav-item mr-2">
