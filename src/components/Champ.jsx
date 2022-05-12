@@ -7,6 +7,7 @@ import '../assets/styles/components/Champ.scss';
 const Champ = (props) => {
     const [champ, setChamp] = useState(null);
     const { idChamp } = props.match.params;
+    console.log("🚀 ~ file: Champ.jsx ~ line 10 ~ Champ ~ props.match.params", props.match.params)
     
     const getChamp = async () => {
         const response = await apiConsumption(`champion/${idChamp}.json`);

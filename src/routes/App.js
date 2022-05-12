@@ -8,8 +8,8 @@ const App = () => (
     <BrowserRouter>
         <Layout>
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/:idChamp" component={Champ} />
+                <Route exact path="/leagueOfLegends" component={Home} />
+                <Route exact path="/leagueOfLegends/:idChamp" component={Champ} />
             </Switch>
         </Layout>
     </BrowserRouter>

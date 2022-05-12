@@ -1,4 +1,5 @@
 export const apiConsumption = async (endpoint) => {
+    console.log("🚀 ~ file: petitions.js ~ line 2 ~ apiConsumption ~ endpoint", endpoint)
     const lastVersion = await getLastVersion();
     const baseURL = `https://ddragon.leagueoflegends.com/cdn/${lastVersion}/data/es_MX/`;
     const data = await fetch(`${baseURL}${endpoint}`);

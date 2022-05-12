@@ -7,7 +7,7 @@ const Card = ({id, name, image, title}) => {
     const urlImage = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${splitImage[0]}_0.jpg`;
     
     return (
-        <Link to={`/${id}`}>
+        <Link to={`leagueOfLegends/${id}`}>
             <div className="card_champ">
                 <img className="card_champ__image" src={urlImage} alt={splitImage[0]}/>
                 <div className="card_champ__info">
