@@ -1,20 +1,39 @@
 @import "./Vars.scss";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: $theme-background-color !important;
-    font-size: 17px;
+  &.dark {
+    --theme-font-color: #{$theme-dark-font-color};
+    --theme-font-color-secondary: #{$theme-dark-font-color-secondary};
+    --theme-background-color: #{$theme-dark-background-color};
+    --theme-header-color: #{$theme-dark-header-color};
+  }
+  &.ligth {
+    --theme-font-color: #{$theme-ligth-font-color};
+    --theme-font-color-secondary: #{$theme-ligth-font-color-secondary};
+    --theme-background-color: #{$theme-ligth-background-color};
+    --theme-header-color: #{$theme-ligth-header-color};
+  }
+  background: var(--theme-background-color) !important;
+  font-size: 17px;
+  transition: all ease-in-out 0.4s;
 }
 
-p, h1, h2, h3, h4, h5, h6{
-    color: $theme-font-color !important;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--theme-font-color) !important;
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
+  width: 0px;
 }

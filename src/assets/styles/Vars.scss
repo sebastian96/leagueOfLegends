@@ -1,6 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-$theme-font-color: #eeeeee;
-$theme-font-color-secondary: #ffd369;
-$theme-background-color: #222831;
-$theme-header-color: #222831;
+$theme-dark-font-color: #eeeeee;
+$theme-dark-font-color-secondary: #ffd369;
+$theme-dark-background-color: #222831;
+$theme-dark-header-color: #222831;
+
+$theme-ligth-font-color: #2e2d4d;
+$theme-ligth-font-color-secondary: #f4b942;
+$theme-ligth-background-color: #c7ebf0;
+$theme-ligth-header-color: #c7ebf0;
