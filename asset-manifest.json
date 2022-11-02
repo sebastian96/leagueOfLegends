@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/leagueOfLegends/static/css/main.a8d627f5.chunk.css",
+    "main.css": "/leagueOfLegends/static/css/main.1805cd87.chunk.css",
     "main.js": "/leagueOfLegends/static/js/main.a590df94.chunk.js",
     "main.js.map": "/leagueOfLegends/static/js/main.a590df94.chunk.js.map",
     "runtime-main.js": "/leagueOfLegends/static/js/runtime-main.86174b08.js",
@@ -10,7 +10,7 @@
     "static/js/2.351399cc.chunk.js.map": "/leagueOfLegends/static/js/2.351399cc.chunk.js.map",
     "index.html": "/leagueOfLegends/index.html",
     "static/css/2.74279360.chunk.css.map": "/leagueOfLegends/static/css/2.74279360.chunk.css.map",
-    "static/css/main.a8d627f5.chunk.css.map": "/leagueOfLegends/static/css/main.a8d627f5.chunk.css.map",
+    "static/css/main.1805cd87.chunk.css.map": "/leagueOfLegends/static/css/main.1805cd87.chunk.css.map",
     "static/js/2.351399cc.chunk.js.LICENSE.txt": "/leagueOfLegends/static/js/2.351399cc.chunk.js.LICENSE.txt",
     "static/media/logo.c4dab6f4.png": "/leagueOfLegends/static/media/logo.c4dab6f4.png"
   },
@@ -18,7 +18,7 @@
     "static/js/runtime-main.86174b08.js",
     "static/css/2.74279360.chunk.css",
     "static/js/2.351399cc.chunk.js",
-    "static/css/main.a8d627f5.chunk.css",
+    "static/css/main.1805cd87.chunk.css",
     "static/js/main.a590df94.chunk.js"
   ]
 }
