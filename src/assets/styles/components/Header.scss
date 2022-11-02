@@ -22,6 +22,10 @@
     display: flex;
     width: 78%;
     transition: all ease-in-out 0.5s;
+    justify-content: end;
+    @media screen and (max-width: 1440px) {
+      width: 87%;
+    }
     @media screen and (max-width: 1280px) {
       width: 91%;
     }
